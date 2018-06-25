@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
 
+const courses = [
+	{ id:1, name: 'course1'},
+	{ id:2, name: 'course2'},
+	{ id:3, name: 'course3'},
+];
+
 // Slash is the root of the websile
 app.get('/', (req, res) => {
 	// Send response
@@ -8,8 +14,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/courses', (req, res) => {
-	res.send([1, 2, 3]);
+	res.send(courses);
 });
+
+app.get('/api/courses/:id', (req, res) => {
+	const course = courses.find(c => c.id === parseInt(req.params.id));
+	if (!course) 
+		// 404 object not found
+		res.status(404).send("Course's id not found!");
+	else
+		res.send(course);
+});
+
 
 app.get('/api/post/:year/:month', (req, res) => {
 	// req.params is an object
@@ -22,3 +38,14 @@ app.get('/api/post/:year/:month', (req, res) => {
 // if process.env.PORT is set, we'll use it, otherwise we'll use 3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+
+
+
+
+
+
+
+
+
+
