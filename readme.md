@@ -4,10 +4,12 @@
 Run
 ```bash
 # init by npm
-npm init -yes
+npm init --yes
+# or with the alias
+npm init -y
 
-# install packages
-npm i
+# install package express
+npm i express
 ```
 
 ## Start
