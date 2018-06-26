@@ -2,9 +2,15 @@
 
 ## Requirements
 Run
-```
+```bash
+# init by npm
 npm init -yes
+
+# install packages
+npm i
 ```
-```
-npm i express
+
+## Start
+```bash
+npm start
 ```
