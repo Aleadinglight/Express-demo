@@ -1,0 +1,20 @@
+{
+  "name": "logistics-visualization-backend",
+  "version": "1.0.0",
+  "description": "Backend for logistics visualization project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.vamk.fi/e1601124/logistics-visualization-backend.git"
+  },
+  "author": "Tam Nguyen + Huy Pham",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
+}

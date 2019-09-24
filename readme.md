@@ -14,4 +14,4 @@ npm i express
 
 ## Structures
 
-1. [Basic Example:](../master/BasicExample/)
+- [Basic Example:](../master/BasicExample/) Basic example on how to create REST API with Express.
